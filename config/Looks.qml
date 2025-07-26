@@ -9,19 +9,38 @@ Singleton {
   property QtObject size
 
   colors: QtObject {
-        col_defaultbg: "#061629"
-        col_lightbg: "#0B1B27"
-        col_selectbg: "#13365B"
-        col_comment: "#899DCC"
-        col_darktext: "#DFD091"
-        col_defaulttext: "#EFE0A1"
-        col_lighttext: "#FFF0D1"
-        col_red: "#FF522F"
-        col_orange: "#FE825B"
-        col_yellow: "#C7AE5B"
-        col_green: "#829462"
-        col_cyan: "#92F1E9"
-        col_blue: "#5882DB"
-        col_purple: "#A775A8"
+        property var defaultbg: "#061629"
+        property var lightbg: "#0B1B27"
+        property var selectbg: "#13365B"
+        property var comment: "#899DCC"
+        property var darktext: "#DFD091"
+        property var defaulttext: "#EFE0A1"
+        property var lighttext: "#FFF0D1"
+        property var red: "#FF522F"
+        property var orange: "#FE825B"
+        property var yellow: "#C7AE5B"
+        property var green: "#829462"
+        property var cyan: "#92F1E9"
+        property var blue: "#5882DB"
+        property var purple: "#A775A8"
+        property real opacity: 0.6
+  }
+  font: QtObject {
+    property string family: "MesloLGS NF"
+    property QtObject size: QtObject {
+      property int smallest: 10
+      property int smaller: 12
+      property int small: 15
+      property int normal: 16
+      property int large: 17
+      property int larger: 19
+      property int huge: 22
+      property int hugeass: 23
+      property int title: huge
+    }
+  size: QtObject {
+    property real barHeight: 40
+    property real sidebarWidth: 450
+    property real hyprlandGapsOut: 5 
   }
 }
