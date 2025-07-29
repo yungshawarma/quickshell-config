@@ -1,6 +1,5 @@
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
 import Quickshell
 import Quickshell.Hyprland
 import "root:/config"
@@ -22,7 +21,7 @@ Item {
             Repeater {
                 model: Hyprland.workspaces
                 Rectangle {
-                    color: mA.containsMouse ? Funcs.hexToRgb(Looks.colors.lightbg, Looks.colors.opacity) : "transparent"
+                    color: mA.containsMouse ? Funcs.hexToRgb(Looks.colors.selectbg, Looks.colors.opacity) : "transparent"
                     radius: Looks.rounding.small
                     visible: modelData.monitor.name == barRoot.screen.name && modelData.id > 0
                     height: bar.barHeight

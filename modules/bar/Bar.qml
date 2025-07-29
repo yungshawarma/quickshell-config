@@ -36,6 +36,7 @@ Scope {
                     Layout.leftMargin: Looks.size.barSpacing
                 }
                 Workspaces {}
+                SysTray {}
             }
         }
     }
