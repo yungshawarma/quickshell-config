@@ -1,5 +1,8 @@
 import QtQuick
-import QuickShell
+import Quickshell
+
+pragma Singleton
+pragma ComponentBehavior: Bound
 
 Singleton {
   id: root
@@ -25,6 +28,17 @@ Singleton {
         property var purple: "#A775A8"
         property real opacity: 0.6
   }
+  rounding: QtObject {
+    property int unsharpen: 2
+    property int unsharpenmore: 6
+    property int verysmall: 8
+    property int small: 12
+    property int normal: 17
+    property int large: 23
+    property int verylarge: 30
+    property int screenRounding: large
+    property int windowRounding: 18
+  }
   font: QtObject {
     property string family: "MesloLGS NF"
     property QtObject size: QtObject {
@@ -38,9 +52,11 @@ Singleton {
       property int hugeass: 23
       property int title: huge
     }
+  }
   size: QtObject {
-    property real barHeight: 40
-    property real sidebarWidth: 450
-    property real hyprlandGapsOut: 5 
+    property int barHeight: 40 
+    property int barSpacing: 10
+    property int sidebarWidth: 450
+    property int hyprlandGapsOut: 5 
   }
 }
