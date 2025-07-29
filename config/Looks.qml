@@ -55,6 +55,7 @@ Singleton {
     size: QtObject {
         property int barHeight: 30
         property int barSpacing: 10
+        property int barMiniSpacing: 8
         property int sidebarWidth: 450
         property int hyprlandGapsOut: 5
     }

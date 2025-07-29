@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls
 import Quickshell
 import Quickshell.Hyprland
 import "root:/config"
@@ -21,7 +22,8 @@ Item {
             Repeater {
                 model: Hyprland.workspaces
                 Rectangle {
-                    color: "transparent"
+                    color: mA.containsMouse ? Funcs.hexToRgb(Looks.colors.lightbg, Looks.colors.opacity) : "transparent"
+                    radius: Looks.rounding.small
                     visible: modelData.monitor.name == barRoot.screen.name && modelData.id > 0
                     height: bar.barHeight
                     width: bar.barHeight
@@ -34,7 +36,9 @@ Item {
                         height: 2
                     }
                     MouseArea {
+                        id: mA
                         anchors.fill: parent
+                        hoverEnabled: true
                         onClicked: Hyprland.dispatch("workspace " + modelData.id)
                     }
                     Text {
