@@ -38,6 +38,9 @@ Scope {
                 Workspaces {}
                 SysTray {}
             }
+            Actives {
+                anchors.centerIn: parent
+            }
         }
     }
 }
