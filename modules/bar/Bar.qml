@@ -41,6 +41,20 @@ Scope {
             Actives {
                 anchors.centerIn: parent
             }
+            RowLayout {
+                id: rightSection
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: parent.right
+                }
+                implicitHeight: parent.implicitHeight
+                implicitWidth: parent.implicitWidth / 3
+                spacing: Looks.size.barSpacing
+                NotifsButton {
+                    Layout.rightMargin: Looks.size.barSpacing
+                }
+            }
         }
     }
 }
