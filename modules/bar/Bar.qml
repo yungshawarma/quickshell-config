@@ -51,6 +51,8 @@ Scope {
                 implicitHeight: parent.implicitHeight
                 implicitWidth: parent.implicitWidth / 3
                 spacing: Looks.size.barSpacing
+                QuickSet {}
+                Clock {}
                 NotifsButton {
                     Layout.rightMargin: Looks.size.barSpacing
                 }
